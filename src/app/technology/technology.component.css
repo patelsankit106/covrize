@@ -1,0 +1,87 @@
+.banner-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 660px;
+    width: 100%;
+    z-index: 123;
+}
+.banner-bg-text {
+    align-items: end;
+    display: flex;
+    height: 100%;
+    padding-bottom: 20px;
+}
+.banner-bg-text h1, .banner-bg-text h2, .banner-bg-text h3, .banner-bg-text p, .banner-video-text h1, .banner-video-text h2, .banner-video-text h3, .banner-video-text p {
+    color: #fff;
+    margin-top: 350px;
+}
+h1, h2, h3 {
+    word-wrap: break-word;
+}
+
+h1, h2 {
+    color: #062168;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 76px;
+}
+h3 {
+    color: #031522;
+    font-size: 28px;
+    font-style: normal;
+    line-height: 38px;
+}
+
+.cust-h1 {
+    font-weight: 600;
+    line-height: 54px;
+}
+p {
+    word-wrap: break-word;
+    color: #36414c;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.brand-we {
+    color: #ea4593;
+    font-family: Butler;
+}
+
+/* discover */
+
+.bg-banner-about {
+    background-color: #062168;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 343px;
+    margin-top: 120px;
+}
+.banner-title_txt {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px;
+        margin-top: 150px;
+
+}
+.get-btn {
+    background-color: #ea4593;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    font-size: 26px;
+    height: 60px;
+    line-height: 44px;
+    margin-left: 20px;
+    margin-top: 150px;
+    padding: 7px 36px 4px 45px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.float-end {
+    float: right!important;
+}

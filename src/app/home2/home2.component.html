@@ -1,0 +1,622 @@
+<section class="pt-120 position-relative">
+  <!-- <div class="bglogo-img-right res-div_none">
+    <img
+      src="data:image/png;base64,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"
+      alt="logo_right"
+    />
+  </div> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-lg-6">
+        <!-- <div class="who-we-dot-arrow res-div_none">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAACACAYAAACLDX5LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATmSURBVHgB7d3fThtHFAbwM/sHVQpVyUVIuDNPUPoGi4Rzm/QJsC8rFYKfIM4TGLB6XecJ6txVhTbmCeo3sCtFimwuoGqIKrze05m1DQavpSqZWc1kv5+EFh+QWB3trPF8nrEgzQY7zZdC8MH0YftqNK5tdmqXVHABaXQum8yC6kRiVqo8CIOSPG5TwXmkUSK4klGOelFjjQpOa6MFicI3dBmtjWZOjhZr/Ab3aM2NXomTQyZ6fVvhsyQIDwjM6EU/r6kvAgAAAAAAAACAL1IahdyJnwS1rq7HrzC1qVewED8xHTwIQzXzViXQRgzLzQt5XJjSvBrFD226qt/vNCJfUIkTunz8e61NjtEazppyO+rklSGjCnlxdOWFsO3S7c2Ticib+0Wb4qf3UaM0a/Kcra8Cz6nkxlsZxQc2x09+6EdZdRkEb5FDgoeTK7cio6e0uZudqlXDUbDos8j4AXOfHCLIAefl5ls56qKbghD9sedvb/z6Q58c4USjlWH5uMIkInnG/Y/Xq4e2jTwAAAAAAAAAgCIxOqk0i5/GTP2N01qHCsxYo+fjp6nO+sleYdcbGmm0ip/8MOjdryfMtSen+4dUQEbC2WXxkye8b8ki6tbmUfBCqHcBCO6bXE5tpNHL4qckGf9NlkhHnQje3lYEmVxOrXWd4cyj072O7HPnTlHGTxyuWHPb8AI/61yid+WfjIS+RhqtPEqf+LiqEnZ5db9yJeMLRVIiA4y+gWb9ZL8lDy2yEnflMHs2X5Gj8HLsBV0ywNgVbbvHpy/q8nCzdl01OSavZmrUOZOCmzKU92TBydqHeLWLZB0AAAAAAAAA4P9xblJpPn5KBLWfnOwdkQOcavSS0NeJdN2p+ei846fP8a7c2FJfs8dOLFGe8Uh8wxl1X84nkyWGsrlM/i+CREk9Huw02x/juOrUFZ1QcrZQlKHvv3FsJH76FPNNVoSg52o5tVONTnfzZb5Zu55mfCys2VtkGDW25ps84wux62SUdb7TjNTRtvjpImqsjcLgIuNH3cJnhroNys2WbOru3SpX0WgDBk+bdcH8XH6rRltr+rYLAAAAAAAAKLRcXoK7Gj/pZLzRk9Wz86uf0j8rX///WKjdfI3PRwcUvFysckXlf2QZFT2ZOi/jUVZCvCmyBk6QrunrkwXuxE9huplhS/fizhwSFm4tlCyPn+QJVnTv5mu80Sp+koebpqr4icdszScrn8vnkGXxE2lk/NYx3c33OxU/Caa1f8arHZvipzigvj9erCdEf5FGSFgoYzffFFd1JiNOva/DlGAUfy9D1bpsbkSInwAAAAAAAMCIpXMdaTLC4S4JLo0Tfr3xB16Sfo7MRmfGT4IP13/brxF8ksz56Mz4icVB0eInnTIbreKnzN+exE9WUPHToHzcW6HgT7X2cPj0uEEWy2y0ENzOKPY3Tvc6ZImF+EmNuJ2jOlkqs9HhKKmrxs4ez+InskRe8ZNOmRP/0/hpU8VPLP/r+DD6um1T/MSxnJwPF+u64yednI2y8oifdHI2ylLx03UYHApitd4a8RMAAAAAAAAAwJdORU+9qGHNXnV5yHWa9P7me0UKfHPd9861+Emn3Bq9PH7ynlEB5NboNH7KIBN3az5M0qTcGr3eqXUXPkxycgItKoBc79GxH0w+SJJYhqh8ZnPGp9t/yKj3myxwanUAAAAASUVORK5CYII="
+            alt="right-arrow"
+          />
+        </div> -->
+        <h2 class="mb-30">Our Company</h2>
+        <h3 class="mb-30">
+          COVRIZE is a technology enabler with expertise in Digital
+          Transformation and Product Engineering Practices.
+        </h3>
+        <p class="mb-60">
+          Covrize is born out of the passion of our Leaders to launch a tech
+          company that is both rooted in values and also carries a human-centric
+          approach. When we launched Covrize, our main focus was to keep our
+          employees at the centre stage of everything we do, be it our vision,
+          mission and organizational success. Being an employee-centric company
+          is one aspect of our vision. At the same time, we aspire to become one
+          of the finest service providers in the IT Outsourcing industry, and
+          earn a respectable name in India for Global clients.
+        </p>
+        <a class="more-btn" routerLink="/about">Find Out More</a>
+      </div>
+      <div class="col-12 col-sm-12 col-lg-6">
+        <div class="row align-even">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-12 xl-12">
+                <div class="achieve-box">
+                  <h3 class="pink-text">Years</h3>
+                  <h2>50+</h2>
+                  <p>
+                    The executive team has a combined expertise of more than 50
+                    years, with a strong focus on IT outsourcing and delivering
+                    enterprise applications.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-12 xl-12">
+                <div class="achieve-box">
+                  <h3 class="pink-text">Deliveries&nbsp;</h3>
+                  <h2>10+</h2>
+                  <p>
+                    Having Delivered more than 10 Large Size enterprise projects
+                    with projects recognized &amp; applauded by the Indian
+                    Government.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 achieve-col-2">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-12 xl-12">
+                <div class="achieve-box">
+                  <h3 class="pink-text">Accreditations&nbsp;</h3>
+                  <h2>5+</h2>
+                  <p>
+                    Partnering with Industry leaders like Microsoft and IGIS, We
+                    align to the processes of accrediting institutions and
+                    ensure high-quality service to our clients.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-12 xl-12">
+                <div class="achieve-box">
+                  <h3 class="pink-text">Experts</h3>
+                  <h2>50+</h2>
+                  <p>
+                    Team of highly skilled and hand-picked people who understand
+                    the importance of each project and give them their best.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="multi-icon-left res-div_none">
+    <img
+      src="data:image/png;base64,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"
+      alt="left_dot_arrow"
+    />
+  </div>
+</section>
+
+<!-- section 3 who we are -->
+
+<section id="sec3" class="pt-120 position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-lg-6 position-relative pt-95">
+        <h2 class="mb-30">Who We Are?</h2>
+        <h3 class="mb-30">
+          <b class="brand-we">WE</b> are a group company of
+          <a href="https://equescapital.in">Eques Capital.</a>
+        </h3>
+        <p class="mb-60">
+          A well-known conglomerate having expertized in several business
+          transformations of diverse businesses such as Geomatics, Private
+          Equity, Commodity shipping, and logistics. Based on our expertise and
+          understanding of emerging technologies, <b class="brand-we">WE</b> mix
+          the best parts of your business and our partner ecosystem to deliver
+          effective solutions that are critical in achieving your organizational
+          goals.
+        </p>
+      </div>
+      <div class="col-12 col-sm-12 col-lg-6 ind-per_div position-relative">
+        <div class="row align-center">
+          <div class="col-6 gal-item-left p-0 d-flex">
+            <div
+              data-gatsby-image-wrapper=""
+              class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+            >
+              <div style="max-width: 366px; display: block">
+                <img
+                  alt=""
+                  role="presentation"
+                  aria-hidden="true"
+                  src="https://www.covrize.com/static/91bde658cc161e558a2f0e8e69d5eb7f/991af/1.webp"
+                  style="max-width: 100%; display: block; position: static"
+                />
+              </div>
+              <div
+                aria-hidden="true"
+                data-placeholder-image=""
+                style="
+                  opacity: 0;
+                  transition: opacity 500ms linear 0s;
+                  background-color: rgb(240, 9, 9);
+                  position: absolute;
+                  inset: 0px;
+                  object-fit: cover;
+                "
+              ></div>
+            </div>
+          </div>
+          <div class="col-6 gal-item-right p-0 d-flex">
+            <div
+              data-gatsby-image-wrapper=""
+              class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+            >
+              <div style="max-width: 295px; display: block">
+                <img
+                  alt=""
+                  role="presentation"
+                  aria-hidden="true"
+                  src="https://www.covrize.com/static/63f97ec33930364a7566475381b325be/8f418/2.webp"
+                  style="max-width: 100%; display: block; position: static"
+                />
+              </div>
+              <div
+                aria-hidden="true"
+                data-placeholder-image=""
+                style="
+                  opacity: 0;
+                  transition: opacity 500ms linear 0s;
+                  background-color: rgb(184, 184, 184);
+                  position: absolute;
+                  inset: 0px;
+                  object-fit: cover;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3 mt--40 gal-item-left p-0">
+            <div
+              data-gatsby-image-wrapper=""
+              class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+            >
+              <div style="max-width: 191px; display: block">
+                <img
+                  alt=""
+                  role="presentation"
+                  aria-hidden="true"
+                  src="https://www.covrize.com/static/e84d5052ebe323fa4e69c962b69b2ab0/0c686/3.webp"
+                  style="max-width: 100%; display: block; position: static"
+                />
+              </div>
+              <div
+                aria-hidden="true"
+                data-placeholder-image=""
+                style="
+                  opacity: 0;
+                  transition: opacity 500ms linear 0s;
+                  background-color: rgb(168, 168, 168);
+                  position: absolute;
+                  inset: 0px;
+                  object-fit: cover;
+                "
+              ></div>
+            </div>
+          </div>
+          <div class="col-4 mt-3">
+            <div
+              data-gatsby-image-wrapper=""
+              class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+            >
+              <div style="max-width: 230px; display: block">
+                <img
+                  alt=""
+                  role="presentation"
+                  aria-hidden="true"
+                  src="https://www.covrize.com/static/72ef79a98494783a579fb58d7289107d/549e7/4.webp"
+                  style="max-width: 100%; display: block; position: static"
+                />
+              </div>
+              <div
+                aria-hidden="true"
+                data-placeholder-image=""
+                style="
+                  opacity: 0;
+                  transition: opacity 500ms linear 0s;
+                  background-color: rgb(232, 232, 232);
+                  position: absolute;
+                  inset: 0px;
+                  object-fit: cover;
+                "
+              ></div>
+            </div>
+          </div>
+          <div class="col-5 mt-3 gal-item-right p-0">
+            <div
+              data-gatsby-image-wrapper=""
+              class="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+            >
+              <div style="max-width: 258px; display: block">
+                <img
+                  alt=""
+                  role="presentation"
+                  aria-hidden="true"
+                  src="https://www.covrize.com/static/c8d6f24364d925b41eee7396dc877dbd/28e16/5.webp"
+                  style="max-width: 100%; display: block; position: static"
+                />
+              </div>
+              <div
+                aria-hidden="true"
+                data-placeholder-image=""
+                style="
+                  opacity: 0;
+                  transition: opacity 500ms linear 0s;
+                  background-color: rgb(88, 88, 88);
+                  position: absolute;
+                  inset: 0px;
+                  object-fit: cover;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bglogo-img-left res-div_none">
+    <img
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAY8AAAGrCAYAAAA4pxvHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAreSURBVHgB7d3dcRxVHsbh04MxjGy5Sk5gYyCDJQOcgckAR7CQwZIBZAAZEII3A20Ay3q5gBtTszUSBn9Io3nV3dPnnH6eK1tSlS9/dST9/ZZCV/7zv9/+UQDgWPtw/PzLr7sCAMd4Ew7xAOAob4dDPIBT2BSatg/HMOy+LgAnJB4NEw5gKeLRKOEAliQeDRIOYGni0RjhAGogHg0RDqAW4tEI4QBqIh4NEA6gNuJROeEAaiQeFRMOoFbiUSnhAGomHhUSDqB24lEZ4QBaIB4VEQ6gFeJRCeEAWiIeFRAOoDXisTDhAFokHgsSDqBV4rEQ4QBaJh4LEA6gdeJxYsIB9EA8Tkg4gF6Ix4kIB9AT8TgB4QB6Ix4zEw6gR+IxI+EAeiUeMxEOoGfiMQPhAHonHhMTDmANxGNCwgGshXhMRDiANRGPCQgHsDbiMZJwAGskHiMIB7BW4nFPwgGsmXjcg3AAayceIeEAEI+IcABcE48jCQfAX8TjCMIB8C7xuINwAHxIPA4QDoCbiccthAPgduJxA+EAOEw83iMcAHcTj7cIB8BxxOMPwgFwPPEowgGQWn08hAMgt+p4CAfA/aw2HsIBcH+rjIdwAIyzungIB8B4q4qHcABMYzXxEA6A6awiHsIBMK3u4yEcANPrOh7CATCPbuMhHADz6TIewgEwr+7iIRwA8+sqHsIBcBrdxEM4AE6ni3gIB8BpNR8P4QA4vabjIRwAy2g2HsIBsJwm4yEcAMtqLh7CAbC8puIhHAB1aCYewgFQjybiIRwAdak+HsIBUJ+q4yEcAHWqNh7CAVCvKuMhHAB1qy4ewgFQv6riIRwAbagmHsIB0I4q4iEcAG1ZPB7CAdCeReMhHABtWiwewgHQrkXiIRwAbTt5PIQDoH0njYdwAPThZPEQDoB+nCQewgHQl9njIRwA/Zk1HsIB0KfZ4iEcAP2aJR7CAdC3yeMhHAD9mzQewgGwDpPFQzgA1mOSeAgHwLqMjodwAKzPqHgIB8A63TsewgGwXveKh3AArFscD+EAIIqHcACwd3Q8hAOAN46Kh3AA8LY74yEcALzvYDyEA4Cb3BoP4QDgNjfGQzgAOOSDeAgHAHd5Jx7CAcAx/oyHcABwrKt4CAcAiY1wAJAafv7l112hK0+fnA0FYEaTbZgDsB7iAUBMPACIiQcAMfEAICYeAMTEA4CYeAAQEw8AYuIBQEw8AIiJBwAx8QAgJh4AxMQDgJh4ABATDwBi4gFATDwAiIkHADHxACAmHgDExAOAmHgAEBMPAGLiAUBMPACIiQcAMfEAICYeAMTEA4CYeAAQEw8AYuIBQEw8AIiJBwAx8QAgJh4AxMQDgJh4ABATDwBi4gFATDwAiIkHADHxACAmHgDExAOAmHgAEBMPAGLiAUBMPACIiQcAMfEAICYeAMTEA4CYeAAQEw8AYuIBQEw8AIiJBwAx8QAgJh4AxMQDgJh4ABATDwBi4gFATDwAiIkHADHxACAmHgDExAOAmHgAEBMPAGLiAUBMPACIiQcAMfEAICYeAMTEA4CYeAAQEw8AYuIBQEw8AIiJBwAx8QAgJh4AxMQDgJh4ABATDwBi4gFATDwAiIkHADHxACAmHgDExAOAmHgAEBMPAGLiAUBMPACIiQcAMfEAICYeAMTEA4CYeAAQEw8AYuIBQEw8AIiJBwAx8QAgJh4AxMQDgJh4ABATDwBi4gFATDwAiIkHADHxACAmHgDExAOAmHgAEBMPAGLiAUBMPACIiQcAMfEAICYeAMTEA4CYeAAQEw8AYuIBQEw8AIiJBwAx8QAgJh4AxMQDgJh4ABATDwBi4gFATDwAiIkHADHxACAmHgDExAOAmHgAEBMPAGLiAUBMPACIiQcAMfEAICYeAMTEA4CYeAAQEw8AYuIBQEw8AIiJBwAx8QAgJh4AxMQDgJh4ABATDwBi4gFATDwAiIkHADHxACAmHgDExAOAmHgAEBMPAGLiAUBMPACIiQcAMfEAICYeAMTEA4CYeAAQEw8AYuIBQEw8AIiJBwAx8QAgJh4AxMQDgJh4ABATDwBi4gFATDwAiIkHADHxACAmHgDExAOA2INCd/772+5vBWBGw8+//LorAHCkYdh97dtWABxtGMo/L84ffSMeABxlKOWHi/OzF/s/iwcAx7gsv2+/fPMXPzAH4C6X24+3f98+GV69+YCXBwCHXIdjO/z77Q+KBwC3erh58MX74dgTDwBuNGyG548fP/zXTZ8TDwA+sL/luHi8/f62z4sHAO+4Csf5o28OfY14APCnoey+uyscV1/nvycB4MpQXj49P/vsmC/18gBg73L7YPvFsV8sHgDceMtxiHgArNruVRqOPfEAWLHhowfP03DsiQfASg2b8tXFo09+LPcgHgArdH0EePZtuSfxAFiZN4NOZQR3HgArMgzDTxfn28/LSF4eAOtxWV5/+qxMwBgUwDp8MOg0hpcHQP8u73PLcYh4AHTutkGnMcQDoGOHBp3GEA+ATt016DSGeAB06JhBpzHEA6Azxw46jSEeAD0Zysvy+9mLMjN3HgD9uBp02p5Pc8txiJcHQB8mv+U4RDwAmrd7NcctxyG+bQXQuP2g0+NH099yHOLlAdCwq1/Jveeg0xjiAdCouW85DhEPgAZNMeg06t83BgXQmKG8fHp+9llZkJcHQFsuh9fjlwDH8ttWAO2YdNBpDC8PgCbsXp3yCPAu4gHQgIebj6sJx554AFRu2JSv5hh0GkM8ACp2Peh09m2pjHgAVGrJI8C7uPMAqNBQyg8XT86elUp5eQDU5mrQaftlqZg7D4C6nGzQaQwvD4B6XNZ0y3GIeABU4fSDTmOIB0AFhs2muluOQ8QDYGHXtxzb70tDxANgQTXfchwiHgALWXrQaQxHggBLqGDQaQwvD4DTq2LQaQxHggCnVc2g0xheHgAnU9eg0xjiAXAiw7B51kM49nzbCuAE9oNOF4+3P5VOeHkAzKzWQacxxANgRi3fchwiHgAzuRp0Oj97UTokHgDzuKx90GkMPzAHmF4XtxyHeHkATKuZQacxxANgQi0NOo0hHgATGTbD85YGncYQD4AJtDjoNIZ4AIzU6qDTGOIBMMJQdt+tLRx7xqAA7qvxQacxvDwA7udy+2D7RVkp8QDIreKW4xDxAIj0M+g0hngABIaPHjxfezj2xAPgSFeDTo8++bEgHgDH6HHQaQzxALhDr4NOY7jzADhgGIafLs63nxfe4eUBcLvL8vrTZ4UPGIMCuFn3g05jeHkAfGj1R4B3EQ+A96xl0GkM8QB4y5oGncYQD4A/rG3QaQzxACjrHHQaQzyA1VvroNMY4gGs21Belt/PXhQi7jyANbsadNqeu+VIeXkAa+WWYwTxAFZo98otxzi+bQWszn7Q6fEjtxxjeHkAq3L1K7kGnUYTD2A13HJMRzyAVTDoNC1jUED/hvLy6fnZZ4XJeHkAvbscXlsCnJrftgJ6ZtBpJl4eQKd2rxwBzkc8gC493HwsHDMSD6A7w6Z8ZdBpXuIBdOV60Ons28KsxAPohiPA03HnAXRhKOWHiydnzwon4eUBtO9q0Gn7ZeFk3HkArTPotAAvD6BlBp0WIh5Aoww6LUk8gCYNm41bjgWJB9Cc61uO7feFxYgH0BS3HHUQD6AZBp3q4UgQaINBp6p4eQAtMOhUGUeCQO0MOlXIywOomEGnWokHUK1h2DwTjjr9HzkzXcm5eEyKAAAAAElFTkSuQmCC"
+      alt="left_arrow"
+    />
+  </div>
+</section>
+
+<!-- section 4 our service -->
+<!-- 
+<section id="sec4" class="pt-120 position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 col-xl-12">
+        <h2 class="mb-20">Our Services</h2>
+        <h3 class="mb-30"></h3>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid slider-pl-0 res-div_none">
+    <div class="row mt-4 pos position-relative slider-mb-120">
+      <div class="col-lg-2 slider-img">
+        <img
+          src="https://www.covrize.com/static/015c7670cfe1cb3e3b2f5c3c809e037a/1f5fb/services.webp"
+          alt="img"
+        />
+      </div>
+      <div class="col-lg-2 offset-lg-3 slider-mt-120">
+        <div>
+          <div class="service box-modify">
+            <h3 class="mb-30">Digital Transformation</h3>
+            <p>
+              <b class="brand-we">WE</b> can expedite the deployment of
+              applications, accelerate cloud migration and utilize the power of
+              advanced analytics to empower your decision-making and build
+              future projects successful.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- blog section -->
+
+<section class="pt-120 position-relative">
+  <div class="bglogo-img-right-center res-div_none">
+    <img
+      src="data:image/webp;base64,UklGRhIEAABXRUJQVlA4WAoAAAAQAAAAjgEAqgEAQUxQSAEBAAANcNBq25V8NIAGkMCZgJnAmcCRgJnAv4E2+DTBH0GbaKHb+9+eiGDktm0YBTr3OsODH2AfcvPTpLjxKoauhX00LXiI4UUMz2rYacFx0sLNUlDFTjE0L6iCzjpkjaBza+D2XPutGLHzVFL1XBXHj3XVRtCJpgWxoIqd6yBGz7UT48GgRtBRw6wRdJw3ei6vNnqu+aBG0Kk3hhzqjZ5rqTaGHDylBh38Hw5v/g+H4/9weMUxHM4bPZcXVD2X3cP/wuszef8zH7qmxuE/+A/+g//gP/gP/oP/4D/4D/6D/+A/+A/+g//gP/hPq5GA/+K/+C/+i//iv/gv/ov/4r/4b6mmAQBWUDgg6gIAAFA2AJ0BKo8BqwE+0WiwUigmpKKjHbgBABoJaW7hdI0AvfGrkxmxlOqtgD+AfgB+AH7+9/gMxMx1xfYkZ3zj/5+zg/5/8+uI2R8sp3iA0pKOzfztfdRROVKODpUhSSj/P/n7giNkdU4o93V7OD/n/z60j+fz/5+zg/5/8+qTsnSLBQunH/z9nB/z/22s4HiSFJKP8/+fs4LgwyqvRHPdmiOe7NEc92aI57s0RziFbCC0qQpNLfe9uqrNleQSe+Hv/8/fqs2V5BLfe9uqqNJrJdOP/n7OD/n/zbwObj/5+zg/5/8/ZcOzipCklH+f/P2cHzSAXP/n7OD/n/z9m7OaykKSUf5/8/Zwf48pDs4P+f/P2cH/P9QZ18Ue7q9nB/z/59Zjhjg/5/8/Zwf8/9tdNpR7ur2cH/P/n6vcETNq9nB/z/5+zgt97iFJKP8/+fs4P+VMcMcFnmajOavZwf8/+fq9wRMxvvq4fn7px/8/Zwf8qY4YtimA0jYBcmNwf8/+fq9wRBk7J0jYBcmNwf8/+fsuHZmimA0jYBcmNwf8/+fs3ZzLimA0jYBeFz/5+zg/5/7au53bAm6HjLmgAP7om8tNP5e8YyQgafyHR4EZar+b36dxWnzlLPOUs85SzzlLRW9qKusZP83zo2dNBs5EAAdCR4iCIuKdoaWhrQYMlQlH5qtU8/ek8+1wAOZb8MNe+7FU3YmqROgPeqqGFoI2KfRgB9+JBf/n4//PQ//66czC0Ea3z/gA9/LX//+lRAKWn3Tas57OgL/Lkv8uS/y5L/Lkv8IC1CuOD/owJ8erXAuYfcZh9xmH3GYfcZh4AAsSQPToAAAxJgAAJC8AABmTAAASF4Auq+nJ+IXxq+nKxAXOQuPhKBL3hauy7S1S4am1VgI4oV9OViAuchcfEJoxIC1vC1dl2lqlw1Nqt8OGHvvC1dl2lqlw1NquIODTr6crEBc5C4+ITRxjGDE2b6aEzsMm8EOJdcSnKAAA"
+      alt="logo_right"
+    />
+  </div>
+  <div class="multi-icon-left-center res-div_none">
+    <img
+      src="data:image/webp;base64,UklGRsQEAABXRUJQVlA4WAoAAAAQAAAAlgAAfwAAQUxQSCUCAAABkBbbtt42F8JjIDGQGcQMFAYqgwfhQRCEB8EQBOFBEARBuDPWZ8+99/zLTERAcCNJkVQVscdM0Tc/EH+bN62d8NlJv7sQmraPErqzHubFZ8o+qxDaWXXphNIm+Zu8edtqYiT/Mh+mkVKZF1VdE58y73XfwqfMfzTcN3/qRXA3ldN5RzdKB56pzu7ss1DaftVCStXCyR1GHuHjGTZewcVrmHgHD+9h4RM4+AwGWpKm0bHPwZW5V/8HWJk71ZQRWObDp9UOqy0vXJn32+G7DKk1FVbms+47AkXgpMzrYSacGBxdxNMOZiRm1S3DjEX/TjCjITCxRBJNHPFE0YIY2hBBK/xrh3ct8a0tnrXGr/Z4NQhDXaDXf776AFXmDTjqZUdUmf9gZhhc3MAOMp9jmaNe59r1Pqiuyrwdj5EuqK7KPOlh5UsMRV6gMk/b8bLajrnOdj7+RjnARJHclixiTvVeVJZ6x07/WBkBG2NgYRTwxgFtJLDGAiklKqLMSwpIxZT5It7w8NSKLXMgbsp8RH2MLeGwf20FV+aHj3ARHMHKfBMg9m/1/ZsEN6sgCVbmUKL89i6tZQdvtHK4dv9MDjyRBffy4E4mXMuFK9lwlg9HGbFLiRlR5jnkpwtU5gHHVZl3XaRZsGX+SV7GX5nPcSYtqDLvT2UeaN//kGXeWP1MTkJo57Zm+Zu8XRJS50et8e6BlXkhdPf4T2JCQ6vMF1ZlnozLXAAAVlA4IHgCAADwFgCdASqXAIAAPtFcqE+oJKOiJtD76QAaCU3cGAp/AGGA7AD8AErOR/+6/IDbmrrpW9RbxOf0l7BfmA/VrfAP6h6EHqdegB5a/sPfcd7TurgeGv4B73ff4b/Kftltrg8Z7SHzXe33zTY8pR3bNWjYYdDz4mxwfrxUgiB/wYBzw7gW3BP8RAb8nHaeS5CiMKWRQJis9/5qkTTBvj+uuN61dusSqwHtoN5aDcKds0D0umS+6ICAwJELckF8Fnr1pAAA9n+hAXX1GhnU2oNn3En/BldvjxsMI7l/dp/IgLpt23+/ce0Wxt45ZXDgHYc9PCpBDJV11ESE3ggBOVy84feZB9NKMr/SJF3SQJSDprRZfpjpg1IKGkCPre6pdp+lfhRvwbULgMLX1AuKuZ4SOzeZPoAesddntp+vQ/9TaCTHhDNXQzlp8t32mQIJdrwj72gNLtezafHvCwANbwLHg0Bt+AseZf3MO3rtFd/tGRyfzoF4v1QM2eiR+Jc/y6742meNkTiz0qQKwVi5+JPKvBPDB7Yf+BuYdO8k5Lxa+c3wpWhTXsgki9WOXA7pn2V8Tjwg1zarRT4jcFqa62qKTvWcWYI2678YTjOTgoyup6Skhco2xFFrhgRDZWbHyNWsKCgMc9XJmOBJVnLT+kvVzp2zrzx3+7yAj2H16gbh3ESSwJjpgh+NxDezWSD2ALJT+9vJ9ZHIXLX56UAtd5PpGeMdFOBU5euy3FSW9Jqj0boZYsXehUf1gXJS2D5Gzki0TpCpAib4/E3Bo4yw0SyQ+tvUO8RViwLIlGdjYnKtUlVQAAwYIIzXLrgs5kfH2Ze5nwJITPdgAAAAAA=="
+      alt="left_dot_arrow"
+    />
+  </div>
+  <div class="container">
+    <div class="row blog-section_style">
+      <div class="col-12 col-md-12 col-xl-12 text-center mb-4">
+        <h2>Blogs</h2>
+      </div>
+      <div class="col-12 col-md-6 col-xl-6">
+        <div>
+          <img id="equas1"
+            src="https://equesimages.azureedge.net/covrizeblogmedia/assets/pexels_negative_space_169573_64be50252f_min_min_9d80ae68c9.webp"
+            alt="pexels_negative_space_169573_64be50252f-min-min.webp"
+          />
+        </div>
+        <a
+          class="no-underline"
+          routerLink="/blog1"
+          ><h3>Issues with Legacy Systems and How to Address Those</h3></a
+        >
+        <p>
+          Maintenance of legacy software requires much time and resources and in
+          reality, upgrading them may offer more advantages.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-xl-6">
+        <div class="row mb30">
+          <div class="col-12 col-md-5 col-xl-5">
+            <div>
+              <img id="equas2"
+                src="https://equesimages.azureedge.net/covrizeblogmedia/assets/blog1_e24278d8ee_min_min_9363dce36a.webp"
+                alt="blog1_e24278d8ee-min-min.webp"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-7 col-xl-7">
+            <div class="w100">
+              <a
+                class="no-underline"
+                routerLink="/blog2"
+                ><h3>
+                  Is automation going to be a game-changer for most of
+                  Industries?
+                </h3></a
+              >
+              <p>
+                In the ever-changing world of technology, companies are always
+                on the lookout to speed up processes while not compromising on
+                the quality aspect that ...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row mb30">
+          <div class="col-12 col-md-5 col-xl-5">
+            <div>
+              <img id="equas2"
+                src="https://equesimages.azureedge.net/covrizeblogmedia/assets/pexels_thisisengineering_3861958_65366b94c1_min_min_b92f1de629.webp"
+                alt="pexels_thisisengineering_3861958_65366b94c1-min-min.webp"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-7 col-xl-7">
+            <div class="w100">
+              <a
+                class="no-underline"
+                routerLink="/blog3"
+                ><h3>
+                  How can you improve the efficiency of your software
+                  development process?
+                </h3></a
+              >
+              <p>
+                There are project management platforms like Trello and Wrike
+                which help to streamline projects and give us and our team
+                insight into how the project i...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row mb30">
+          <div class="col-12 col-md-5 col-xl-5">
+            <div>
+              <img id="equas2"
+                src="https://equesimages.azureedge.net/covrizeblogmedia/assets/security_blog_6b6ad72312_min_min_1d2399b24a.webp"
+                alt="security_blog_6b6ad72312-min-min.webp"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-7 col-xl-7">
+            <div class="w100">
+              <a
+                class="no-underline"
+                routerLink="/blog4"
+                ><h3>Best Practices for Secured Coding for IT companies</h3></a
+              >
+              <p>
+                In the modern era, security is of paramount importance when it
+                comes to developing websites, apps, and software. Try to
+                visualize that you are moving ...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /* sec 5 how we work */ -->
+
+<section class="pt-120 mb-43">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 col-xl-12">
+        <h2 class="mb-20">How We Work?</h2>
+        <h3 class="mb-30"></h3>
+      </div>
+    </div>
+    <div class="row mt-60 res-div_none">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card-image image-with-right-border"><h2>01</h2></div>
+        <h3 class="clear-float mb-30">Get In Touch</h3>
+        <p>
+          <b class="brand-we">WE</b> will schedule a discovery call to learn
+          more about your requirements. Tell us about your idea and the
+          technologies you plan to use to develop the apps.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card-image image-with-right-border"><h2>02</h2></div>
+        <h3 class="clear-float mb-30">Concepts &amp; Initiatives</h3>
+        <p>
+          Our specialists provide multiple ideas and estimation of efforts to
+          provide the best fit solution in the opted IT services.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card-image image-with-right-border"><h2>03</h2></div>
+        <h3 class="clear-float mb-30">Testing &amp; Trying</h3>
+        <p>
+          <b class="brand-we">WE</b> will proceed as planned after agreeing on
+          the concepts and plans, and WE'll provide feedback on the outcomes and
+          changes required.
+        </p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card-image image-with-right-border"><h2>04</h2></div>
+        <h3 class="clear-float mb-30">Execute &amp; install</h3>
+        <p>
+          Everything will be carried out in accordance with the contract after
+          the final plan has been accepted.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section 6 assess your company -->
+
+<section class="pt-120 pb-120 bg-banner mt-120">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-7 col-xl-7">
+        <h2 class="banner-title_txt">
+          Assess your company's potential and find out possibilities for success
+        </h2>
+      </div>
+      <div class="col-12 col-md-5 col-xl-5">
+        <div>
+          <a class="help-btn float-end" routerLink="/contact">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br /><br />
+<br /><br />
+<div class="col-12 col-md-12 col-xl-12 text-center">
+  <h2 class="mb-20">Testimonials</h2>
+  <h3 class="mb-30">Appreciation from Clients</h3>
+</div>
+<!-- <app-carousel></app-carousel> -->
+
+<div class="container text-center my-3">
+  <div class="row mx-auto my-auto">
+    <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+      <div class="carousel-inner w-100" role="listbox">
+        <div class="carousel-item active">
+          <div class="col-md-12">
+            <div class="card card-body">
+              <div class="">
+                <img
+                  id="img1"
+                  src="https://www.covrize.com/static/3a783d3eea22d67314baaea2e7633a74/5d191/charlie.webp"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Charlie <br />Tech Consultant</h5>
+                  <p class="card-text">
+                    About my experience working with Covrize, Urvil was a
+                    pleasure to work with. He is a true professional, extremely
+                    patient with my many changing requests and he is very
+                    knowledgeable. He provided solid solutions to my job
+                    requirements, and took the time to explain everything and
+                    ensure that I understood the details of the solution. In the
+                    future, I plan to work with him and his team on a regular
+                    basis.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-12">
+            <div class="card card-body">
+              <div class="">
+                <img
+                  id="img2"
+                  src="https://www.covrize.com/static/b164cf32f5ad30208edb505d69e8e24b/5d191/r-b.webp"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Richard Burgher <br />Chairman</h5>
+                  <p class="card-text">
+                    I have known Varix Patel professionally since 2014. He led
+                    the technological development of all our software
+                    applications until his departure from his previous
+                    organization. Varix's ability to make good on his promise
+                    while delivering a world class product puts him in the
+                    category of best among equals. The successful start-up of
+                    our platform business is a testament to his extraordinary
+                    talents.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-md-12">
+            <div class="card card-body">
+              <div class="">
+                <img
+                  id="img2"
+                  src="https://www.covrize.com/static/42607541af635420301a10f359ea3bda/5d191/np-testimonial.webp"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Narendra Patel <br />Executive Vice President
+                  </h5>
+                  <p class="card-text">
+                    Covrize has enabled us to collaborate with a team of
+                    excellent engineers and complete projects faster than ever
+                    before because of our access to such a large talent pool.
+                    Their project management and delivery methods are
+                    considerably superior to those of any other outsourcing firm
+                    with which we have ever worked. I recommend them as a
+                    dependable vendor team. I wish them the best of luck.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev w-auto"
+        href="#recipeCarousel"
+        role="button"
+        data-slide="prev"
+      >
+        <span
+          class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next w-auto"
+        href="#recipeCarousel"
+        role="button"
+        data-slide="next"
+      >
+        <span
+          class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+<br /><br /><br />

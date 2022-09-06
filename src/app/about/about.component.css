@@ -1,0 +1,154 @@
+.banner-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 660px;
+  width: 100%;
+  z-index: 123;
+}
+.banner-bg-text {
+  align-items: end;
+  display: flex;
+  height: 100%;
+  padding-top: 430px;
+  color: #fff;
+
+}
+
+h1,
+h2,
+h3 {
+  word-wrap: break-word;
+}
+h1,
+h2 {
+  /* color: white; */
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 76px;
+}
+
+
+/* section2 */
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+.brand-we {
+    color: #ea4593;
+    font-family: Butler;
+}
+.cust-h1{
+    margin-top: 90px;
+}
+
+/* covrize it solu */
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+.text-center {
+    text-align: center!important;
+}
+
+h3 {
+    color: #031522;
+    font-size: 28px;
+    font-style: normal;
+    line-height: 38px;
+}
+h1, h2, h3 {
+    word-wrap: break-word;
+}
+
+h5 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+}
+.about-exp_style h5 {
+    color: #ea4593;
+    line-height: 26px;
+}
+.pink-text {
+    color: #ea4593;
+}
+
+.about-exp_style h3 {
+    color: #062168;
+    font-size: 64px;
+    line-height: 76px;
+}
+.about-exp_style h3, .about-exp_style h5 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+}
+
+p {
+    word-wrap: break-word;
+    color: #36414c;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+/* images */
+.position-relative {
+    position: relative!important;
+}
+
+.about-gallry_photo1 {
+    text-align: right;
+}
+.w35 {
+    float: left;
+}
+
+.about-gallry_photo1 div {
+    margin-bottom: 25px;
+    text-align: right;
+}
+.gatsby-image-wrapper-constrained {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.gatsby-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-gallry_photo1 div {
+    margin-bottom: 25px;
+    text-align: right;
+}
+.gatsby-image-wrapper-constrained {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.gatsby-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.mt-75 {
+    margin-top: 75px;
+}
+.w30, .w35 {
+    float: left;
+}
+
+.w35 {
+    width: 35%;
+}
+.w30 {
+    width: 25%;
+}
+.w30, .w35 {
+    float: left;
+}
+img{
+    padding: 10px;
+}

@@ -1,0 +1,102 @@
+.relative-pos {
+    position: relative;
+}
+.bg-light-blue {
+    background-color: rgba(238,242,246,.4);
+}
+.main{
+        background-color: rgba(238,242,246,.4);
+
+}
+section {
+    float: left;
+    width: 100%;
+}
+body * {
+    font-family: sans-serif;
+    /* background-color: #f8f9fa; */
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+section {
+    display: block;
+}
+
+/* left image */
+
+.banner-left-img {
+    position: absolute;
+    z-index: -1;
+}
+.img-fluid {
+    height: auto;
+    max-width: 100%;
+
+}
+img,
+svg {
+    vertical-align: middle;
+}
+
+.banner-title {
+    font-size: 64px;
+    line-height: 78px;
+    margin-bottom: 50px;
+    margin-top: 130px;
+    margin-left: 100px;
+}
+h1, h2 {
+    color: #062168;
+    font-weight: 350;
+}
+.mb-43 {
+    margin-bottom: 43px;
+}
+h3 {
+    color: #031522;
+    font-size: 28px;
+    font-style: normal;
+    line-height: 38px;
+    margin-left: 110px;
+    margin-top: 80px;
+}
+
+/* brand we */
+
+.brand-we {
+    color: #ea4593;
+    font-family: Butler;
+}
+
+/* call button */
+
+.call-btn, .help-btn {
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 26px;
+    height: 60px;
+    line-height: 44px;
+    padding: 7px 36px 4px 45px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.call-btn {
+    background-color: #062168;
+    color: #fff;
+}
+
+/* right image */
+.banner-right-img {
+    width: 850px;
+    position: absolute;
+    right: 0;
+    margin-top: 50px;
+        }
+
+
+
+        /* complete home 1 */

@@ -1,0 +1,51 @@
+h1{
+    color: blue;
+}
+
+.logo {
+  /* height: 500px; */
+ margin-top: 18px;
+  width: 250px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+}
+#covrizenavbar {
+    background: #fff;
+    text-align: center;
+    z-index: 999999;
+}
+header .nav .contact-btn {
+    background: #062168;
+    border-radius: 100px;
+    /* float: right; */
+    color: #fff;
+    margin-left: 20px;
+    line-height: 40px;
+    padding: 0 25px;
+    text-decoration: none;
+}
+
+.nav-link{
+  color: red;
+  margin-left: 20px;
+  
+  }
+
+
+
+/* menus */
+
+.sub-menu {
+    border: 0;
+    border-bottom: 2px solid #062168;
+    border-radius: 10px;
+    box-shadow: 0 0 20px -11px #000;
+    
+}
+.dropdown-item{
+    padding: 10px;
+    width: 250px;
+}

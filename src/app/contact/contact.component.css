@@ -1,0 +1,93 @@
+h1 {
+  color: blue;
+}
+
+.banner-title {
+  font-size: 64px;
+  line-height: 78px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  color: #062168;
+}
+.mb-43 {
+  margin-bottom: 43px;
+}
+
+h1,
+h2,
+h3 {
+  word-wrap: break-word;
+}
+/* happy */
+h2 {
+  color: #062168;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 76px;
+  margin-left: 50px;
+}
+
+#form1 {
+  background-color: rgba(238, 242, 246, 0.4);
+}
+
+label {
+  display: inline-block;
+}
+.PhoneInput {
+  align-items: center;
+  display: flex;
+}
+/* SUBMIT BUTTON */
+.submit-btn-modify {
+  background: #062168;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 57px;
+  padding: 0 90px;
+  text-align: center;
+}
+
+p {
+  word-wrap: break-word;
+  color: #36414c;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+#happy {
+  background-color: rgba(238, 242, 246, 0.4);
+  padding: 60px;
+}
+
+.card-image embed,
+.service .card-image img {
+  width: 50px;
+}
+.brand-we {
+  color: #ea4593;
+  font-family: Butler;
+}
+
+.gatsby-image-wrapper-constrained {
+  display: inline-block;
+  vertical-align: top;
+}
+.gatsby-image-wrapper img {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  padding: 0;
+  width: 90px;
+  /* object-fit: cover; */
+}
+
+#img1 {
+  width: 1110px;
+  height: 170px;
+  margin-left: 130px;
+}

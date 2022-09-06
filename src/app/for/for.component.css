@@ -1,0 +1,51 @@
+.banner-video {
+    height: unset;
+    max-height: 800px;
+}
+.banner-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 660px;
+    width: 100%;
+    z-index: 123;
+}
+.banner-video video {
+    height: 800px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+}
+.banner-video-text {
+    align-items: center;
+    background-color: rgba(0,0,0,.28);
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+h1{
+    color: white;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 76px;
+}h1, h2, h3 {
+    word-wrap: break-word;
+}
+h2{
+    color: #062168;
+    font-size: 44px;
+}
+
+p {
+    word-wrap: break-word;
+    color: #36414c;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.brand-we {
+    color: #ea4593;
+    font-family: Butler;
+}

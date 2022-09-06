@@ -1,0 +1,44 @@
+footer {
+    background: #eef2f6;
+    
+}
+
+
+.contect-info_div a, .nav-menu_footer h5 {
+    color: #36414c;
+    font-family: Montserrat;
+    font-style: normal;
+}
+
+.contect-info_div a {
+    float: left;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 40px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.menu_footer h5 {
+    color: #36414c;
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+ .nav-menu_footer a {
+    color: #36414c;
+    font-family:sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    word-wrap: initial;
+    
+}
+.nav-menu_footer a {
+    line-height: 40px;
+    text-decoration: none;
+}
+
+#upimg{
+    width: 40px;
+}

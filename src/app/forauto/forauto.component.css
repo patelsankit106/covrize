@@ -1,0 +1,37 @@
+.banner-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 660px;
+    width: 100%;
+    z-index: 123;
+}
+.banner-bg-text {
+    align-items: end;
+    display: flex;
+    height: 100%;
+    /* padding-bottom: 20px; */
+    color: white;
+    margin-top: 350px;
+}
+ h2 {
+    color: #062168;
+    font-size: 44px;
+    font-weight: 600;
+}
+h3 {
+    color: #031522;
+    font-size: 28px;
+    font-style: normal;
+    line-height: 38px;
+}
+p {
+    word-wrap: break-word;
+    color: #36414c;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.brand-we {
+    color: #ea4593;
+    font-family: Butler;
+}
